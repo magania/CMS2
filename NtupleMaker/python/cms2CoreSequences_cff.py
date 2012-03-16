@@ -1,7 +1,7 @@
 #Contains the core CMS2 makers. Does not contain Gen or PAT makers
 import FWCore.ParameterSet.Config as cms
 
-from CMS2.NtupleMaker.aSkimFilter_cfi              import *
+#from CMS2.NtupleMaker.aSkimFilter_cfi              import *
 from CMS2.NtupleMaker.beamSpotMaker_cfi            import *
 from CMS2.NtupleMaker.bTaggingSequence_cfi         import *
 from CMS2.NtupleMaker.bTagJPTSequence_cfi          import *
@@ -51,9 +51,9 @@ from CMS2.NtupleMaker.vertexMaker_cfi              import *
 from CMS2.NtupleMaker.beamHaloMaker_cfi            import *
 from CMS2.NtupleMaker.fastJetSequence_cff          import *
 from CMS2.NtupleMaker.pfJetMaker_cfi               import *
-from CMS2.NtupleMaker.ecalDRFilterMaker_cff        import *
-from CMS2.NtupleMaker.ecalTPFilterMaker_cff        import *
-from CMS2.NtupleMaker.eeBadRecovMaker_cff          import *
+#from CMS2.NtupleMaker.ecalDRFilterMaker_cff        import *
+#from CMS2.NtupleMaker.ecalTPFilterMaker_cff        import *
+#from CMS2.NtupleMaker.eeBadRecovMaker_cff          import *
 
 CMS2Reco         = cms.Sequence( cms2JetSequence * metCorSequence * CMS2Btagging * CMS2TrkBtagging * CMS2JPTBtagging * davertexreco )
 eventmakers      = cms.Sequence( beamSpotMaker * vertexMaker * vertexMakerWithBS * davertexMaker * eventMaker * hcalNoiseSummaryMaker * cms2InclusiveVertexing * cms2EgammaElectronID )
